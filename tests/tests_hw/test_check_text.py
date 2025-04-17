@@ -14,10 +14,8 @@ def test_check_text(browser):
 def test_check_text_centre(browser):
     """ Проверка текста по центру """
     demo_qa_page = DemoQa(browser)
-    elements_page = ElementsPage(browser)
+    el_page = ElementsPage(browser)
     demo_qa_page.visit()
     demo_qa_page.btn_element.click()
     time.sleep(3)
-    assert elements_page.btn_centre_element.get_text() == 'Please select an item from left to start practice.'
-
-
+    assert el_page.btn_centre_element.get_text() == 'Please select an item from left to start practice.'
