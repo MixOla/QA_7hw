@@ -5,12 +5,14 @@ from pages.elements_page import ElementsPage
 
 
 def test_check_text(browser):
+    """ Проверка текста в footer """
     demo_qa_page = DemoQa(browser)
     demo_qa_page.visit()
     assert demo_qa_page.footer.get_text() == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
 
 
 def test_check_text_centre(browser):
+    """ Проверка текста по центру """
     demo_qa_page = DemoQa(browser)
     elements_page = ElementsPage(browser)
     demo_qa_page.visit()
