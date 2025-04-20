@@ -6,8 +6,13 @@ class WebElement():
         self.driver = driver
         self.locator = locator
 
+
+
     def find_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+
+    def find_elements(self):
+        return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
 
     def click(self):
         return self.find_element().click()
@@ -17,4 +22,8 @@ class WebElement():
 
     def visible(self):
         return self.find_element().is_displayed()
+
+    def check_count_elements(self, count: int) -> bool:
+        return True if len(self.find_elements()) == count else False
+
 

@@ -1,3 +1,5 @@
+from ssl import Options
+
 import pytest
 from selenium import webdriver
 
